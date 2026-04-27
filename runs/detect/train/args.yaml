@@ -6,7 +6,7 @@ epochs: 10
 time: null
 patience: 3
 batch: 8
-imgsz: 640
+imgsz: 960
 save: true
 save_period: -1
 cache: false

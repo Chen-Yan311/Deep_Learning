@@ -9,7 +9,7 @@ if __name__ == '__main__':
         data="coco8.yaml",
         epochs=10,
         batch=8,
-        imgsz=640,
+        imgsz=960,
         workers=0,
         device=0,
         patience=3

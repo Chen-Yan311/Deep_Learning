@@ -14,7 +14,7 @@ def get_DroidCam_url(ip, port=4747, res='1080p'):
 cap = cv2.VideoCapture(get_DroidCam_url('10.79.64.117', 4747, '1080p')) #仅需更改此处变量即可！
 
 if __name__ == '__main__':
-    model = YOLO("yolov8n.pt")
+    model = YOLO("runs/detect/train/weights/best.pt")
 
     while True:
         ret, frame = cap.read()
@@ -23,9 +23,8 @@ if __name__ == '__main__':
 
         results = model(
             frame,
-            conf=0.5,
-            iou=0.3,
-            classes=[67],
+            conf=0.7,
+            iou=0.1,
             imgsz=960,
             max_det=20
         )
